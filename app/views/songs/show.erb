@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Song Show Page</title>
+  </head>
+  <body>
+    Song Name: <%= @song.name %>
+    <br>
+    Artist: <%= @song.artist.name %>
+    Artist Link: <a href=<%= "/artists/#{@song.artist.slug}" %>> link text</a>
+    <br />
+    Genres:
+    <% @song.genres.each do |genre| %>
+      Genre: <%= genre.name %>
+      Genre Link: <a href=<%= "/genres/#{genre.slug}" %>> link text</a>
+      <% end %>
+        Successfully created song.
+        Successfully updated song.
+  </body>
+</html>

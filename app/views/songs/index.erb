@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>songs</title>
+  </head>
+  <body>
+    <h1>THESE ARE ALL THE songS</h1>
+
+    <% Song.all.each do |song| %>
+      <%= song.id %>
+      <%= song.name %>
+      <a href=<%= "/songs/#{song.slug}"%>>linkety</a>
+    <%end%>
+
+  </body>
+</html>
